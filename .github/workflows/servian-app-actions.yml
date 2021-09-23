@@ -1,0 +1,38 @@
+name: Servian App Build
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  REPONAME: ${{ github.event.repository.name }}
+  WORKSPACE: ${{ github.workspace }}
+  CF_USERNAME: ${{ secrets.CF_USERNAME}}
+  CF_PASSWORD: ${{secrets.CF_PASSWORD}}
+  CF_ORG_NAME: ${{ secrets.CF_ORG_NAME}}
+  CF_SPACE_ID: ${{secrets.CF_SPACE_ID}}
+
+jobs:
+  PR-Build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+        with:
+          fetch-depth: 0
+          
+      - name: Print terraform version
+        run: terraform version
+
+      - name: Initalize Terraform
+        run: terraform init
+
+      - name: terraform plan
+        run: terraform plan -var="cf_org_name=${{secrets.CF_ORG_NAME}}" -var="cf_username=${{secrets.CF_USERNAME}}" -var="cf_password=${{secrets.CF_PASSWORD}}" -var="cf_space_id=${{secrets.CF_SPACE_ID}}" -out=tfplan
+
+      - name: terraform apply
+        run: terraform apply "tfplan" -auto-approve
