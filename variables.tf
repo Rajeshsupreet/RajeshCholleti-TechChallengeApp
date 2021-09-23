@@ -62,7 +62,7 @@ variable "db_plan" {
 }
 
 variable "listenport" {
-  type        = string
+  type        = number
   description = "The listenport of the app "
   default     = "8080"
 }
