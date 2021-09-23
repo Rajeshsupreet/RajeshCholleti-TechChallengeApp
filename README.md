@@ -17,8 +17,9 @@ This Terraform root module demonstrates deployment of servian TechChallengeApp t
   8. **Deployment**
       - *GitHub Actions (Automated Process)*
       - *Manual Deployment*. 
-  9. **Contact / Getting help**
-  10. **License**
+  9. **Technical Challenge URL**
+  10. **Contact / Getting help**
+  11. **License**
 ---
 ## 1. What is being provisioned
 
@@ -136,9 +137,15 @@ You can remove all created resources using the terraform [destroy](https://www.t
 ```shell
 $ terraform destroy
 ```
+# 9. Technical Challenge URL
 
-# 9. Contact / Getting help
+To Access Technical Challenge URL depolyed in cloud foundry:
+
+```shell
+https://servian-app.cloud.pcftest.com/
+```
+# 10. Contact / Getting help
 Please reach me at  [Rajesh Cholleti](mailto:rajesh4277@gmail.com)
 
-# 10. License
+# 11. License
 [License](./LICENSE.md) is MIT
