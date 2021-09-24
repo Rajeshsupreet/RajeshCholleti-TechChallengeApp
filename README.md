@@ -142,7 +142,7 @@ $ terraform destroy
 To Access Technical Challenge URL depolyed in cloud foundry:
 
 ```shell
-https://servian-app.cloud.pcftest.com/
+https://techchallenge-app.cloud.pcftest.com/
 ```
 # 10. Contact / Getting help
 Please reach me at  [Rajesh Cholleti](mailto:rajesh4277@gmail.com)
