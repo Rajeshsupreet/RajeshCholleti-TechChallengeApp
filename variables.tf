@@ -7,7 +7,7 @@ variable "docker_image" {
 variable "cf_app_name" {
   type        = string
   description = "The CF app name"
-  default     = "servian-app"
+  default     = "techchallenge-app"
 }
 
 variable "cf_org_name" {
