@@ -92,7 +92,7 @@ No modules.
 - Whenever new code is merged to the main branch then the GitHub action will be triggered automatically.
 - On successful build completion, Tech Challange App and postgres DB instance will be provisioned in cloud foundry
 - The secret variables are configured in Github
-- Full workflow about provisioning Tech Challange App and postgres DB is available in the [servian-app-actions.yml](.github\workflows\servian-app-actions.yml)
+- Full workflow about provisioning Tech Challange App and postgres DB is available in the [servian-app-actions.yml](.github/workflows/servian-app-actions.yml)
 
 ### Manual Deployment
 
